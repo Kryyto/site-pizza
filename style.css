@@ -1,8 +1,39 @@
-.nav {
+body {
+    
+}
+
+main {
+    padding: 30px 50px;
+    height: 100%;
+    background-image: linear-gradient(to right, #00ff87, #60ffcc); 
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Bebas Neue';
+}
+
+#choose {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td, th {
+    border: 1px solid rgb(107, 107, 107);
+    font-style: italic;
+}
+
+nav {
     position: static;
     display: flex;
-    background-color: rgb(16, 153, 12);
+    background-color: rgb(43, 45, 49);
+    color:white;
     padding: 20px 20px;
+    justify-content: center;
 }
 .button {
     padding: 10px 20px;
@@ -10,6 +41,13 @@
     border-radius: 25px;
     text-decoration: none;
     color:black;
+}
+.nom {
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgb(172, 236, 209);
+    padding: 5px;
+    letter-spacing: 1px;
 }
 .list {
     padding: 50px 100px;
@@ -19,11 +57,15 @@ a {
     color: inherit;
     text-decoration: inherit;
 }
-.footer {
-    display: flex;
-    background-color: rgb(43, 43, 43);
+footer {
+    background-color: rgb(43, 45, 49);
     color:white;
     padding: 40px 30px;
+    text-align: center;
+}
+.socials {
+    display: flex;
+    justify-content: space-evenly;
 }
 .button:hover {
     background-color: inherit;
@@ -31,7 +73,8 @@ a {
     border-color:white;
     border-width: 2px;
     color:white;
+    padding: 8px 18px;
 }
 .TOS {
-    right: 10;   
+    justify-self: center;  
 }
