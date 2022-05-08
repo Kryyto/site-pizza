@@ -1,6 +1,5 @@
-body {
-    
-}
+.clr1{ color:#ff3232 }
+.clr2{ color:#41ff41 }
 
 main {
     padding: 30px 50px;
@@ -14,6 +13,21 @@ main {
 #choose {
     justify-content: space-evenly;
     display: flex;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articlep {
+    background-color: white;
+    border-radius: 35px;
+    padding: 30px;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 210px;
 }
 
 table {
@@ -35,6 +49,7 @@ nav {
     padding: 20px 20px;
     justify-content: center;
 }
+
 .button {
     padding: 10px 20px;
     background-color: white;
@@ -42,31 +57,44 @@ nav {
     text-decoration: none;
     color:black;
 }
+
+h1 {
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#titrenav {
+    font-size: 150px;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
 .nom {
     border: 2px solid black;
-    display: inline-block;
-    background-color: rgb(172, 236, 209);
     padding: 5px;
     letter-spacing: 1px;
 }
-.list {
-    padding: 50px 100px;
-    background-color: rgb(172, 236, 209);
-}
+
 a {
     color: inherit;
     text-decoration: inherit;
 }
+
 footer {
     background-color: rgb(43, 45, 49);
     color:white;
     padding: 40px 30px;
     text-align: center;
 }
+
 .socials {
     display: flex;
     justify-content: space-evenly;
 }
+
 .button:hover {
     background-color: inherit;
     border: 2px solid;
@@ -75,6 +103,7 @@ footer {
     color:white;
     padding: 8px 18px;
 }
+
 .TOS {
     justify-self: center;  
 }

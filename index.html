@@ -15,35 +15,71 @@
     </nav>
     <main>
         <section>
-            <h1>Pizza du moment:</h1>
-            <h3>La Fermière: Sauce tomate ou crème, Oignons, Lardons, Mozzarella, Fromage, Crème, Oeuf</h3>
-            <h1>Liste des pizzas du:</h1>
-            <section id="choose">
-                <a class="button" href="#camion">
-                    Camion à Pizza
-                </a>
-                <a class="button" href="#distri">
-                    Distributeur à Pizza
-                </a>
+            <h1>Pizza du Moment:</h1>
+            <section class="list">
+                <section class="articlep" style="height: 260px;">
+                    <h1 class="nom">La Royale</h1>
+                    <h2>Ingrédients: Sauce Tomate, Oignons, Jambon, Champignons, Mozzarella, Fromage</h3>
+                    <h2>Prix:<br>
+                        - Moyenne: 10€<br>
+                        - Grande: 13€
+                    </h2>
+                </section>
             </section>
         </section>
         <!-- Distributeur -->
         <section>
-            <h1 id="distri">Carte du Distributeur à Pizza:</h1>
-            <section>
-                Pizza 1:
-                Pizza 2:
-                Pizza 3:
-                Pizza 4:    
+            <h1 id="distri">Pizzas du Distributeur:</h1>
+            <section class="list">
+                <section class="articlep">
+                    <h1 class="nom">Pizza N°1: 4 Fromages</h1>
+                    <h2>Ingrédients: Sauce Tomate, Chèvre, Mozzarella, Roquefort, Fromage</h3>
+                    <h2>Prix: 10€</h2>
+                </section>
+                <section class="articlep">
+                    <h1 class="nom">Pizza N°2: Burger</h1>
+                    <h2>Ingrédients: Sauce Burger, Oignons, Viande Hachée, Cornichons, Cheddar, Filet de Tomate</h3>
+                    <h2>Prix: 10€</h2>
+                </section>
+                <section class="articlep">
+                    <h1 class="nom">Pizza N°3: Pouletsillade</h1>
+                    <h2>Ingrédients: Sauce Tomate, Oignons, Poulet, Pomme de Terre, Beurre Persillée, Fromage</h3>
+                    <h2>Prix: 10€</h2>
+                </section>
+                <section class="articlep">
+                    <h1 class="nom"> Pizza N°4: Romanaise</h1>
+                    <h2>Ingrédients: Crème, Jambon, Ravioles, Fromage</h3>
+                    <h2>Prix: 10€</h2>
+                </section>
             </section>
-            
         </section>
         <!-- Camion -->
-        <h1 id="camion">Carte du Camion à Pizza:</h1>
+        <h1 id="camion">Les Classiques du Camion à Pizza:</h1>
         <!-- Listes des pizzas -->
-        <h1 class="nom">La Fromage</h1>
-        <h2>Tomate, Fromage, Olives</h3>
-        <h2>Moyenne: 7.50€</h2>
+        <section class="list">
+            <section class="articlep">
+                <h1 class="nom">La Fromage</h1>
+                <h2>Tomate, Fromage, Olives</h3>
+                <h2>Moyenne: 7.50€</h2>
+            </section>
+            <section class="articlep">
+                <h1 class="nom">La Fromage</h1>
+                <h2>Tomate, Fromage, Olives</h3>
+                <h2>Moyenne: 7.50€</h2>
+            </section>
+            <section class="articlep">
+                <h1 class="nom">La Fromage</h1>
+                <h2>Tomate, Fromage, Olives</h3>
+                <h2>Moyenne: 7.50€</h2>
+            </section>
+            <section class="articlep">
+                <h1 class="nom">La Fromage</h1>
+                <h2>Tomate, Fromage, Olives</h3>
+                <h2>Moyenne: 7.50€</h2>
+            </section>
+        </section>
+        
+
         <table>
             <tr>
                 <th>Nom</th>
@@ -185,19 +221,34 @@
             </tr>
         </table>
     </main>
-</body>
-<!-- Footer -->
-<footer>
-    <section class="socials">
-        <a class="button" href="https://www.facebook.com/">
-            <i class="fab fa-1.2x fa-facebook"></i></i> Facebook de Couleur Pizza 26
-        </a>&emsp;
-        <a class="button" href="https://github.com/Kryyto">
-            <i class="fab fa-1.2x fa-github"></i> Profil du créateur du site
-        </a>            
-    </section>
-    <p>Merci de votre fidélité depuis 2005</p>
-    <a class="TOS" href="#">Mentions Légales - Couleur Pizza</a>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <section class="socials">
+            <a class="button" href="https://www.facebook.com/">
+                <i class="fab fa-1.2x fa-facebook"></i></i> Facebook de Couleur Pizza 26
+            </a>&emsp;
+            <a class="button" href="https://github.com/Kryyto">
+                <i class="fab fa-1.2x fa-github"></i> Profil du créateur du site
+            </a>            
+        </section>
+        <p>Merci de votre fidélité depuis 2005</p>
+        <a class="TOS" href="#">Mentions Légales - Couleur Pizza</a>
+    </footer>
 
+</body>
+<script>
+    var str = 'Couleur Pizza';
+    var chars = str.split("");
+    var result = '';
+    for(var i = 0;i<chars.length; i++) {
+        if( i % 2 == 0) {
+            result += '<span class="clr2">' + chars[i] + '</span>';
+        } else {
+            result += '<span class="clr1">' + chars[i] + '</span>';
+        }
+        
+    }
+    document.getElementById("titrenav").innerHTML = '<h1>' + result + '<h1>';
+    
+</script>
 </html>
