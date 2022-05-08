@@ -1,5 +1,20 @@
-.clr1{ color:#ff3232 }
-.clr2{ color:#41ff41 }
+.clr1{ color:#ff0000 }
+.clr2{ color:#02b802 }
+
+.navtitle {
+    background-color: white;
+    border-radius: 35px;
+    padding: 5px 15px;
+}
+
+nav {
+    position: static;
+    display: flex;
+    background-color: rgb(43, 45, 49);
+    color:white;
+    padding: 20px 20px;
+    justify-content: center;
+}
 
 main {
     padding: 30px 50px;
@@ -39,15 +54,6 @@ table {
 td, th {
     border: 1px solid rgb(107, 107, 107);
     font-style: italic;
-}
-
-nav {
-    position: static;
-    display: flex;
-    background-color: rgb(43, 45, 49);
-    color:white;
-    padding: 20px 20px;
-    justify-content: center;
 }
 
 .button {
