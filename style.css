@@ -1,5 +1,10 @@
 .clr1{ color:#ff0000 }
-.clr2{ color:#02b802 }
+.clr2{ color:#00d672 }
+
+body {
+    background-image: url('backgroundpizza.jpg');
+    background-size: 5047px 3456px; 
+}
 
 .navtitle {
     background-color: white;
@@ -10,7 +15,7 @@
 nav {
     position: static;
     display: flex;
-    background-color: rgb(43, 45, 49);
+    background-color: #d00000;
     color:white;
     padding: 20px 20px;
     justify-content: center;
@@ -19,7 +24,6 @@ nav {
 main {
     padding: 30px 50px;
     height: 100%;
-    background-image: linear-gradient(to right, #00ff87, #60ffcc); 
     font-weight: bold;
     font-style: normal;
     font-family: 'Bebas Neue';
@@ -33,14 +37,15 @@ main {
 .list {
     display: flex;
     flex-wrap: wrap;
-}
-
-.articlep {
     background-color: white;
     border-radius: 35px;
     padding: 30px;
+    width: auto;
+}
+
+.articlep {
     width: 40%;
-    margin: auto;
+    margin: 20px auto;
     margin-bottom: 20px;
     height: auto;
 }
@@ -79,7 +84,7 @@ h2 {
 }
 
 .nom {
-    border: 2px solid black;
+    border: 5px solid #d00000;
     padding: 5px;
     letter-spacing: 1px;
 }
