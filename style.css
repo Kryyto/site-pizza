@@ -163,7 +163,12 @@ footer {
         margin-bottom: 0;
     }
 
-    .titre1 .titre2 {
-        top: 0;
+    .titre1{
+        top: 40px;
+        position: relative;
+    }
+    .titre2{
+        top: 60px;
+        position: relative;
     }
   }
