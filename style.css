@@ -11,10 +11,14 @@ body {
     background-color: white;
     border-radius: 35px;
     margin: 20px 20px;
-    width: 300px;
+    width: 500px;
     padding: 10px;
     display: block;
     margin: auto;
+}
+
+.teltext {
+    width: auto;
 }
 
 .titre1 {
@@ -180,5 +184,8 @@ footer {
     .titre2{
         top: 60px;
         position: relative;
+    }
+    .teltext, .tel {
+        width: 150px;
     }
   }
