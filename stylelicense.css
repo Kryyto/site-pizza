@@ -1,0 +1,53 @@
+
+body {
+    background-color: white;
+    font-family: 'Lucida Sans';
+}
+
+nav {
+    position: static;
+    display: flex;
+    background-color: rgb(43, 45, 49);
+    color:white;
+    padding: 20px 20px;
+    justify-content: center;
+    margin: -10px -10px 0 -10px;
+}
+
+main {
+    padding: 30px 50px;
+    height: 100%;
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Bebas Neue';
+}
+
+h1 {
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+
+a {
+    font-size: 30px;
+    text-align: center;
+    margin: 270px;
+}
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+  }
+
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    h1 {
+        font-size: 15px;
+        margin: 10px 0;
+        text-align: center;
+    }
+  }

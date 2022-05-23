@@ -1,5 +1,11 @@
-.clr1{ color:#ff0000 }
-.clr2{ color:#00d672 }
+.clr1{ 
+    color:#ff0000;
+    font-size: 60px;
+}
+.clr2{ 
+    color:#00d672;
+    font-size: 60px;
+}
 
 body {
     background-image: url('backgroundpizza_final.jpg');
@@ -60,6 +66,23 @@ main {
 #choose {
     justify-content: space-evenly;
     display: flex;
+}
+
+#emplacesect {
+    margin: 20px 100px;
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 90px;
+    height: auto;
+}
+
+#emplacement {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.day {
+    margin: 20px 30px;
 }
 
 .list {
@@ -155,7 +178,9 @@ footer {
 @media only screen and (max-width:800px) {
     /* For tablets: */
   }
-
+  .day {
+    margin: 8px;
+    }
   @media only screen and (max-width:500px) {
     /* For mobile phones: */
     body {
@@ -186,6 +211,22 @@ footer {
         position: relative;
     }
     .teltext, .tel {
-        width: 150px;
+        width: 170px;
+    }
+
+    .clr1, .clr2 {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 17px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    .day {
+        margin: 10px;
+    }
+    .nom {
+        
     }
   }
