@@ -1,5 +1,6 @@
 :root {
     --neutral: #e7e7e7;
+    --borderAngle: 10px;
 }
 
 .clr1{ 
@@ -19,7 +20,7 @@ body {
 
 .tel {
     background-color: var(--neutral);
-    border-radius: 5px;
+    border-radius: var(--borderAngle);
     margin: 20px 20px;
     width: 500px;
     padding: 10px;
@@ -31,21 +32,14 @@ body {
     width: auto;
 }
 
-.titre1 {
+.titre-list {
     color:#00c96b;
     position: relative;
-    top: 60px;
-}
-
-.titre2 {
-    color:#00c96b;
-    position: relative;
-    top: 75px;
 }
 
 .navtitle {
     background-color: var(--neutral);
-    border-radius: 5px;
+    border-radius: var(--borderAngle);
     padding: 5px 15px;
 }
 
@@ -53,7 +47,7 @@ nav {
     position: static;
     display: flex;
     background-color: rgb(43, 45, 49);
-    colorvar(--neutral);
+    color: var(--neutral);
     padding: 20px 20px;
     justify-content: center;
     margin: -10px -10px 0 -10px;
@@ -88,13 +82,17 @@ main {
     margin: 20px 30px;
 }
 
+.list-container {
+    background-color: var(--neutral);
+    border-radius: var(--borderAngle);
+    padding: 20px 10px;
+    margin: 30px 0;
+    width: auto;
+}
+
 .list {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--neutral);
-    border-radius: 5px;
-    padding: 30px;
-    width: auto;
 }
 
 .articlep {
@@ -118,14 +116,14 @@ td, th {
 .button {
     padding: 10px 20px;
     background-color: var(--neutral);
-    border-radius: 5px;
+    border-radius: var(--borderAngle);
     text-decoration: none;
     color:black;
 }
 
 h1 {
     font-size: 30px;
-    margin: 10px 0;
+    margin: 0;
     text-align: center;
 }
 
@@ -150,7 +148,7 @@ a {
 
 footer {
     background-color: rgb(43, 45, 49);
-    colorvar(--neutral);
+    color: var(--neutral);
     padding: 40px 30px;
     text-align: center;
     margin: 0 -10px -10px -10px;
@@ -164,9 +162,9 @@ footer {
 .button:hover {
     background-color: inherit;
     border: 2px solid;
-    border-colorvar(--neutral);
+    border-color: var(--neutral);
     border-width: 2px;
-    colorvar(--neutral);
+    color: var(--neutral);
     padding: 8px 18px;
 }
 
