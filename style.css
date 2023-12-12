@@ -1,3 +1,7 @@
+:root {
+    --neutral: #e7e7e7;
+}
+
 .clr1{ 
     color:#ff0000;
     font-size: 60px;
@@ -14,8 +18,8 @@ body {
 }
 
 .tel {
-    background-color: white;
-    border-radius: 35px;
+    background-color: var(--neutral);
+    border-radius: 5px;
     margin: 20px 20px;
     width: 500px;
     padding: 10px;
@@ -40,8 +44,8 @@ body {
 }
 
 .navtitle {
-    background-color: white;
-    border-radius: 35px;
+    background-color: var(--neutral);
+    border-radius: 5px;
     padding: 5px 15px;
 }
 
@@ -49,7 +53,7 @@ nav {
     position: static;
     display: flex;
     background-color: rgb(43, 45, 49);
-    color:white;
+    colorvar(--neutral);
     padding: 20px 20px;
     justify-content: center;
     margin: -10px -10px 0 -10px;
@@ -87,8 +91,8 @@ main {
 .list {
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
-    border-radius: 35px;
+    background-color: var(--neutral);
+    border-radius: 5px;
     padding: 30px;
     width: auto;
 }
@@ -103,7 +107,7 @@ main {
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: white;
+    background-color: var(--neutral);
 }
 
 td, th {
@@ -113,8 +117,8 @@ td, th {
 
 .button {
     padding: 10px 20px;
-    background-color: white;
-    border-radius: 25px;
+    background-color: var(--neutral);
+    border-radius: 5px;
     text-decoration: none;
     color:black;
 }
@@ -146,7 +150,7 @@ a {
 
 footer {
     background-color: rgb(43, 45, 49);
-    color:white;
+    colorvar(--neutral);
     padding: 40px 30px;
     text-align: center;
     margin: 0 -10px -10px -10px;
@@ -160,9 +164,9 @@ footer {
 .button:hover {
     background-color: inherit;
     border: 2px solid;
-    border-color:white;
+    border-colorvar(--neutral);
     border-width: 2px;
-    color:white;
+    colorvar(--neutral);
     padding: 8px 18px;
 }
 
