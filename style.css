@@ -1,64 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root, *, *::before, *::after { box-sizing: border-box; }
+
 :root {
-    --neutral: #e7e7e7;
-    --borderAngle: 10px;
+    --neutral: #f5f5f5;
+    --surface: #ffffff;
+    --ink: #1f2933;
+    --muted: #6b7280;
+    --brand-green: #1b8a5a;
+    --brand-green-600: #126e43;
+    --brand-red: #c81e1e;
+    --borderAngle: 14px;
+    --shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .clr1{ 
-    color:#ff0000;
+    color: var(--brand-red);
     font-size: 60px;
 }
 .clr2{ 
-    color:#00d672;
+    color: var(--brand-green);
     font-size: 60px;
 }
 
+html, body { width: 100%; overflow-x: hidden; }
+
 body {
-    background-image: url('backgroundpizza_final.jpg');
-    background-size: 5047px 3456px; 
-    font-family: 'Lucida Sans';
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--ink);
+    background: #faf9f7 url('backgroundpizza_final.jpg') center/cover fixed no-repeat;
+    position: relative;
+    padding: 10px;
+}
+
+/* warm overlay to soften photo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(27,138,90,0.18), rgba(200,30,30,0.12));
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
 .tel {
-    background-color: var(--neutral);
-    border-radius: var(--borderAngle);
-    margin: 20px 20px;
-    width: 500px;
-    padding: 10px;
+    background: var(--surface);
+    border-radius: 999px;
+    width: fit-content;
+    margin: 16px auto 28px;
+    padding: 20px 28px;
+    box-shadow: var(--shadow);
+    justify-content: center;
+    align-items: center;
     display: block;
-    margin: auto;
 }
 
 .teltext {
-    width: auto;
+    color: var(--brand-green-600);
 }
 
 .titre-list {
-    color:#00c96b;
+    color: var(--brand-green-600);
     position: relative;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 }
 
 .navtitle {
-    background-color: var(--neutral);
+    background-color: rgba(255,255,255,0.8);
     border-radius: var(--borderAngle);
-    padding: 5px 15px;
+    padding: 6px 18px;
 }
 
 nav {
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
-    background-color: rgb(43, 45, 49);
+    backdrop-filter: saturate(120%) blur(6px);
+    background: rgba(150,150,150,0.65);
     color: var(--neutral);
-    padding: 20px 20px;
+    padding: 18px 20px;
     justify-content: center;
-    margin: -10px -10px 0 -10px;
 }
 
 main {
-    padding: 30px 50px;
-    height: 100%;
-    font-weight: bold;
-    font-style: normal;
-    font-family: 'Bebas Neue';
+    padding: 24px 0 48px;
 }
 
 #choose {
@@ -83,23 +115,30 @@ main {
 }
 
 .list-container {
-    background-color: var(--neutral);
+    background: var(--surface);
     border-radius: var(--borderAngle);
-    padding: 20px 10px;
-    margin: 30px 0;
+    padding: 22px 18px;
+    margin: 28px 0;
     width: auto;
+    box-shadow: var(--shadow);
+    overflow: hidden; /* guard against shadows/borders causing overflow */
 }
 
 .list {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: stretch;
+    max-width: 100%;
 }
 
 .articlep {
-    width: 40%;
-    margin: 20px auto;
-    margin-bottom: 20px;
-    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 16px 16px 18px;
+    background: linear-gradient(180deg, rgba(27,138,90,0.06), rgba(255,255,255,0.9));
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: calc(var(--borderAngle) - 2px);
+    transition: transform .12s ease, box-shadow .12s ease;
+    max-width: 100%;
 }
 
 table {
@@ -115,30 +154,39 @@ td, th {
 
 .button {
     padding: 10px 20px;
-    background-color: var(--neutral);
+    background-color: var(--surface);
     border-radius: var(--borderAngle);
     text-decoration: none;
-    color:black;
+    color: var(--ink);
+    box-shadow: var(--shadow);
 }
 
 h1 {
-    font-size: 30px;
-    margin: 0;
+    font-size: 28px;
+    margin: 0 0 6px 0;
     text-align: center;
 }
 
 #titrenav {
-    font-size: 400px;
+    font-size: clamp(22px, 4vw, 34px) !important;
+    letter-spacing: 0.5px;
 }
 
+.brand-green { color: var(--brand-green); }
+.brand-red { color: var(--brand-red); }
+
 h2 {
-    margin-bottom: 0;
+    margin: 2px 0;
+    font-weight: 400;
+    color: var(--muted);
 }
 
 .nom {
-    border: 5px solid #d00000;
-    padding: 5px;
-    letter-spacing: 1px;
+    border: 0;
+    padding: 6px 8px;
+    letter-spacing: 0.4px;
+    border-left: 6px solid var(--brand-red);
+    text-align: left;
 }
 
 a {
@@ -147,11 +195,10 @@ a {
 }
 
 footer {
-    background-color: rgb(43, 45, 49);
+    background: rgba(15,17,19,0.85);
     color: var(--neutral);
     padding: 40px 30px;
     text-align: center;
-    margin: 0 -10px -10px -10px;
 }
 
 .socials {
@@ -160,16 +207,14 @@ footer {
 }
 
 .button:hover {
-    background-color: inherit;
-    border: 2px solid;
-    border-color: var(--neutral);
-    border-width: 2px;
-    color: var(--neutral);
+    background-color: var(--brand-green);
+    border: 2px solid var(--brand-green);
+    color: #fff;
     padding: 8px 18px;
 }
 
 .gentext {
-    font-size: 100px;
+    font-size: clamp(22px, 4vw, 34px) !important; /* keep title reasonable even if script runs */
 }
 
 .TOS {
@@ -185,7 +230,7 @@ footer {
   @media only screen and (max-width:500px) {
     /* For mobile phones: */
     body {
-        background-size: 4000px 2800px; 
+        background-size: cover; 
     }
     .articlep {
       width: 100%;
@@ -193,16 +238,16 @@ footer {
       margin: 0px;
     }
     h1 {
-        font-size: 15px;
+        font-size: 18px;
         margin: 10px 0;
         text-align: center;
     }
     
     h2 {
-        font-size: 10px;
+        font-size: 14px;
         margin-bottom: 0;
     }
-
+    
     .titre1{
         top: 40px;
         position: relative;
@@ -211,23 +256,20 @@ footer {
         top: 60px;
         position: relative;
     }
-    .teltext, .tel {
-        width: 170px;
+    .tel {
+        width: auto;
     }
-
+    
     .clr1, .clr2 {
-        font-size: 30px;
+        font-size: 22px;
     }
     h1 {
-        font-size: 17px;
+        font-size: 20px;
     }
     h2 {
-        font-size: 15px;
+        font-size: 14px;
     }
     .day {
         margin: 10px;
     }
-    .nom {
-        
-    }
-  }
+}
